@@ -9,3 +9,5 @@ google-generativeai
 python-dotenv
 xgboost
 gunicorn
+scikit-learn
+pandas
