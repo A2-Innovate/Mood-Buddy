@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Manager AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="landing-page" class="landing-container">
+        <div class="landing-content">
+            <h1>Mood Manager AI</h1>
+            <p>Feeling off? Let AI analyze your facial expressions.</p>
+            <button class="btn-large" onclick="enterDashboard()">Want a Mood Check?</button>
+        </div>
+    </div>
+
+    <div id="dashboard-section" class="dashboard-container hidden">
+        <header class="app-header">
+            <h1>Mood Manager AI</h1>
+            <button class="btn-small" onclick="goHome()">Back to Home</button>
+        </header>
+
+        <div class="main-grid">
+            <div class="left-panel">
+                <div class="camera-wrapper">
+                    <div class="live-indicator">● LIVE</div>
+                    <video id="webcam" autoplay playsinline></video>
+                    <div class="scan-overlay"></div>
+                </div>
+
+                <div class="role-selector" style="margin-bottom: 15px;">
+                    <label style="color: #94a3b8; font-size: 0.9rem; display: block; margin-bottom: 5px;">Choose AI Persona:</label>
+                    <select id="ai-role" style="background: #1e293b; color: white; border: 1px solid #475569; padding: 12px; border-radius: 8px; width: 100%; font-size: 1rem; cursor: pointer;">
+                        <option value="Friend">Project Partner (Friend)</option>
+                        <option value="Professional">Career Counselor (Professional)</option>
+                        <option value="Roaster">Witty Friend (Roaster)</option>
+                        <option value="Strict">Strict Mentor (Motivator)</option>
+                        <option value="Poet">Classy Poet (Shayar)</option>
+                    </select>
+                </div>
+                <button class="btn-primary" onclick="analyzeMood()">Analyze Now</button>
+            </div>
+
+            <div class="right-panel">
+                <div class="panel-card result-section">
+                    <h3>Current Analysis</h3>
+                    <div class="mood-display">
+                        <div class="emoji-box" id="result-emoji">🤔</div>
+                        <div class="text-details">
+                            <h2 id="result-mood">Waiting...</h2>
+                            <p class="confidence">Confidence: <span id="result-conf">--</span></p>
+                        </div>
+                    </div>
+                    <div class="suggestion-box">
+                        <strong>AI Suggestion:</strong>
+                        <p id="result-suggestion">Click "Analyze Now" to get a suggestion.</p>
+                    </div>
+                </div>
+
+                <div class="panel-card history-section">
+                    <div class="history-header">
+                        <h3>Mood History</h3>
+                        <button class="btn-small" onclick="resetGraph()">Reset</button>
+                    </div>
+                    <div class="chart-container">
+                        <div id="no-history-msg" class="empty-state">
+                            <p>No Mood History</p>
+                            <span>Start analyzing to build your graph</span>
+                        </div>
+                        <canvas id="moodChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
