@@ -1,6 +1,6 @@
 # Mood Buddy
 
-🚀 **[Live Demo](https://www.google.com/search?q=https://your-app-name.onrender.com)** | 💻 **[GitHub Repository](https://www.google.com/search?q=https://github.com/yourusername/mood-buddy)**
+🚀 **[Live Demo](https://mood-buddy.onrender.com/)** | 💻 **[GitHub Repository](https://github.com/A2-Innovate/Mood-Buddy)**
 
 Mood Buddy is a web-based application that performs real-time facial emotion recognition and delivers context-aware, persona-driven responses using Generative AI.
 
