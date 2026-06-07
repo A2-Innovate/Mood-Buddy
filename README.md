@@ -29,6 +29,11 @@ The system captures webcam feeds, extracts geometric facial landmarks, and class
 4.  **Generation:** The predicted emotion and user-selected role are passed to the Gemini API wrapper, which returns a formatted response.
 5.  **Delivery:** The prediction, confidence score, and AI response are returned to the client and rendered on the dashboard.
 
+## Data Set
+```bash
+https://www.kaggle.com/datasets/ananthu017/emotion-detection-fer
+```
+
 ## Installation and Setup
 
 ### Prerequisites
